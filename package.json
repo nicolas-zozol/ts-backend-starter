@@ -1,0 +1,59 @@
+{
+  "name": "@robusta/ts-backend-starter",
+  "version": "0.0.1",
+  "description": "TS Backend Starter with Husky for prettier",
+  "keywords": [
+    "starter",
+    "typescript",
+    "clean-code",
+    "husky",
+    "prettier"
+  ],
+  "author": "Nicolas Zozol <nicolas@robusta.io>",
+  "contributors": [],
+  "license": "Private",
+  "homepage": "https://github.com/nicolas-zozol/robusta.io#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicolas-zozol/robusta.io"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/ts-backend-starter.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "test:watch": "tsdx test",
+    "test:coverage": "tsdx test --coverage",
+    "lint": "tsdx lint --fix",
+    "prerelease": "npm run build",
+    "script":"node --loader ts-node/esm ./scripts/run.ts",
+    "nodeVersion": "node -v"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.9.1",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "husky": "^3.1.0",
+    "tsdx": "^0.14.1",
+    "typescript": "^4.1.3",
+    "tslib": "^2.1.0",
+    "ts-node": "^9.1.1"
+  }
+}
