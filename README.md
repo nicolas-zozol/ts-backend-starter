@@ -1,6 +1,18 @@
 TS Backend Starter
 ====
 
+Note: ESM Modules  are not ready yet for debugging with typescript
+
+Especially 
+    
+    "script":"node --loader ts-node/esm ./scripts/run.ts",
+
+This is running, but not debugging
+
+So main branch is not compiling to esnext, but there is a branch esnext that is state of the art
+compliant. 
+
+
 This starter solves a list of problems with the most recent technologies
 Used help from [Plop Logger](https://github.com/ilaborie/plop-logger) from Igor
 
